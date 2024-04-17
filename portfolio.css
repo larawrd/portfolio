@@ -1,33 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap");
 
-.scroll{
-    height: 60vh;
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  box-sizing: border-box !important;
+  padding: 0;
+  margin: 0;
 }
 
-.text-marquee {
-  position: relative;
-  display:flex; 
-  align-items:center;
-  overflow-x: hidden;
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
-.text-single {
+.marquee {
+  overflow: hidden;
+  box-sizing: border-box;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  height: 40px;
+  width: 455px;
+  border-radius: 22px;
+  box-shadow: 4px 4px 0 #000;
+  overflow: hidden;
+  background: white;
   white-space: nowrap;
-  padding: 0;
-    margin: 0;
-  will-change: transform;
 }
 
-.text {
-  padding: 0;
-  font-size: 6.4rem;
-  display: inline-block;
-  margin-right: 2rem;
-  font-family: 'Manrope', sans-serif;
-  font-weight: bold;
+.marquee--inner {
+  display: block;
+  width: 200%;
+  position: absolute;
+  animation: marquee 10s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+    color: red;
+  }
+}
+
+span {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }
