@@ -1,60 +1,104 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap");
+navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Color de fondo del navbar */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+}
 
+ul { 
+    margin: 0px auto 0; 
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+  }
+  li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+  }
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+/* CSS para el resto del contenido */
 * {
-  box-sizing: border-box !important;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: red;
-  font-family: "Nunito", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-style: italic;
 }
 
 .marquee {
-  overflow: hidden;
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #000;
-  height: 40px;
-  width: 455px;
-  box-shadow: 4px 4px 0 #000;
-  overflow: hidden;
-  background: white;
-  white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    height: 40px;
+    width: 455px;
+    box-shadow: 4px 4px 0 #000;
+    overflow: hidden;
+    background: white;
+    white-space: nowrap;
+    margin-top: 60px; /* Ajusta el margen superior para evitar que el navbar oculte el contenido */
 }
 
 .marquee--inner {
-  display: block;
-  width: 200%;
-  position: absolute;
-  animation: marquee 10s linear infinite;
-  &:hover {
-    animation-play-state: paused;
-    color: red;
-  }
+    display: block;
+    width: 200%;
+    position: absolute;
+    animation: marquee 10s linear infinite;
 }
 
 span {
-  float: left;
-  width: 50%;
-  overflow: hidden;
+    float: left;
+    width: 50%;
+    overflow: hidden;
 }
 
 @keyframes marquee {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
 }
