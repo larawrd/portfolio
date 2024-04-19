@@ -119,8 +119,8 @@ body {
 
 .guitar-silhouette {
   position: absolute;
-  top: 30%;
-  left: 20px; /* Ajustado el valor de left */
+  top: 24%;
+  left: 100px; /* Ajustado el valor de left */
   width: 500px; /* Ajusta el ancho de la imagen según sea necesario */
   height: auto; /* Ajusta la altura automáticamente en función del ancho */
   z-index: 1;
