@@ -88,6 +88,44 @@ body {
     animation: marquee 10s linear infinite;
 }
 
+/* Estilos existentes */
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee--inner {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.text {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+.marquee-image {
+  position: absolute;
+  top: 50%;
+  left: 100px; 
+  transform: translateY(-50%);
+  /* Ajusta el tamaño de la imagen según sea necesario */
+  width: 500px; /* Ajusta el ancho de la imagen según sea necesario */
+  height: auto; /* Ajusta la altura automáticamente en función del ancho */
+  z-index: 2;
+}
+
+.guitar-silhouette {
+  position: absolute;
+  top: 30%;
+  left: 20px; /* Ajustado el valor de left */
+  width: 500px; /* Ajusta el ancho de la imagen según sea necesario */
+  height: auto; /* Ajusta la altura automáticamente en función del ancho */
+  z-index: 1;
+}
+
 span {
     float: left;
     width: 50%;

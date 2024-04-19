@@ -5,7 +5,7 @@ let position = 0;
 const speed = 1.5; // Speed of the animation (adjust as needed)
 
 function animateLoop() {
-    position -= speed;
+    position = speed;
     for (const text of texts) {
         text.style.transform = `translateX(${position}px)`;
     }
