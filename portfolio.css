@@ -53,19 +53,27 @@ ul {
     margin: 0;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('redbckg.jpg'); /* Nombre del archivo de imagen */
-  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+html, body {
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 0; /* Eliminar relleno predeterminado */
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-style: italic;
+  overflow-y: auto; /* Agrega desplazamiento vertical */
+  height: 100vh;
 }
 
+.parte-uno {
+  background-image: url("redbckg.jpg");
+  padding: 4em;
+  text-align: center;
+  margin: 0; /* Eliminar márgenes */
+  width: 100vw; /* Ajustar el ancho al 100% del viewport */
+  height: 100vh; /* Ajustar la altura al 100% del viewport */
+  display: flex; /* Usar flexbox para centrar vertical y horizontalmente */
+  align-items: center; /* Centrar verticalmente el contenido */
+  justify-content: center; /* Centrar horizontalmente el contenido */
+}
 
 .name {
   font-size: 500%;
@@ -91,6 +99,7 @@ body {
   position: absolute;
   top: 50%;
   left: 100px; 
+  position: fixed;
   transform: translateY(-50%);
   /* Ajusta el tamaño de la imagen según sea necesario */
   width: 500px; /* Ajusta el ancho de la imagen según sea necesario */
@@ -101,6 +110,7 @@ body {
 .guitar-silhouette {
   position: absolute;
   top: 24%;
+  position: fixed;
   left: 100px; /* Ajustado el valor de left */
   width: 500px; /* Ajusta el ancho de la imagen según sea necesario */
   height: auto; /* Ajusta la altura automáticamente en función del ancho */
@@ -131,6 +141,7 @@ span {
   width: 350px; /* Ajusta el ancho de la imagen según sea necesario */
   height: auto; /* Ajusta la altura automáticamente en función del ancho */
   z-index: 2;
+  position: fixed;
 }
 
 .godot_shadow {
@@ -140,4 +151,13 @@ span {
   width: 350px; /* Ajusta el ancho de la imagen según sea necesario */
   height: auto; /* Ajusta la altura automáticamente en función del ancho */
   z-index: 1;
+    position: fixed;
+}
+
+.parte-2 {
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  background-color: yellow; /* Cambia el color de fondo a amarillo */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 4em; /* Añade relleno al contenido */
+  margin-top: 1em; /* Añade un margen superior para separarlo del primer div */
 }
