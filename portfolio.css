@@ -78,19 +78,18 @@ body{
 .name::after {
 	animation-delay: var(--animation-delay, 2s);
 	animation-iteration-count: var(--iterations, 1);
-	animation-duration: var(--duration, 800ms);
+	animation-duration: var(--duration, 1000ms);
 	animation-fill-mode: both;
 	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 .name {
 	--animation-delay: var(--delay, 0);
-	--animation-duration: var(--duration, 800ms);
+	--animation-duration: var(--duration, 1000ms);
 	--animation-iterations: var(--iterations, 1);
 	position: relative;
 	font-size: 10vw;
 	animation-name: clip-text;
-	color: #FFF;
 	white-space: nowrap;
 	cursor: default;
 	
@@ -102,7 +101,7 @@ body{
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: #f2f98b;
+		background-color: #ad3e44;
 		transform: scaleX(0);
 		transform-origin: 0 50%;
 		pointer-events: none;
