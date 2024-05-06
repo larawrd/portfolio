@@ -56,12 +56,14 @@ body{
 
 
 .main {
-  margin-top: 50px; /* Adjust top margin to account for navbar height */
-  padding: 20px;
+  padding: 250px;
   background-color: #f2e0c9;
 }
 
 .name {
   color: #ad3e44;
   text-align: center; /* Center the text horizontally */
+  font-size: 400%;
 }
+
+
