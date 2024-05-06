@@ -64,6 +64,19 @@ body{
   color: #ad3e44;
   text-align: center; /* Center the text horizontally */
   font-size: 400%;
+  overflow: hidden; /* Para ocultar el texto inicialmente */
+  border-bottom: 3px solid transparent; /* Línea transparente para cada letra */
+  animation: reveal 2s forwards; /* Animación que revela el texto */
 }
 
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(100%); /* Mueve el texto hacia abajo */
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0); /* Vuelve a la posición original */
+  }
+}
 
