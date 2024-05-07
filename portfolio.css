@@ -179,8 +179,10 @@ body{
   text-align: center; /* Centrar contenido dentro de cada celda de la cuadrícula */
   gap: 5px; /* Reducir el espacio entre las celdas */
   margin-left: 150px;
+  margin-top: -5%;
   margin-right: 150px;
   grid-row-gap: 50px; /* Aumentar la separación vertical entre filas */
+  padding: 5%;
 }
 
 
@@ -354,3 +356,6 @@ body{
   }
 }
 /* END Keyframes for the initial animation */
+.wave {
+  margin-top: -20%;
+}
