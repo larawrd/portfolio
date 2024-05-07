@@ -54,9 +54,8 @@ body{
   padding: 0; /* Eliminar relleno predeterminado */
 }
 
-
 .main {
-  padding: 150px;
+  padding: 100px;
   background-color: #f2e0c9;
 }
 
@@ -163,7 +162,7 @@ body{
   margin: 0 auto; /* Centra horizontalmente */
   height: 5%;
   width: 5%;
-  margin-top: 10%;
+  margin-top: 7%;
 }
 
 .skills{
@@ -249,8 +248,31 @@ body{
 }
 
 .node + svg .outer {
-  stroke: #83cd29;
+  stroke: #252525;
 }
+
+
+.kotlin {
+	width: 200px;
+	height: 200px;
+	top: 45px;
+	left: 45px;
+  }
+  
+  .kotlin + svg .outer {
+	stroke: #7715d3;
+  }
+
+  .flutter {
+	width: 200px;
+	height: 200px;
+	top: 45px;
+	left: 45px;
+  }
+  
+  .flutter + svg .outer {
+	stroke: #00d9ff;
+  }
 
 .chart svg {
   position: absolute;
