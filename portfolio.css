@@ -163,8 +163,21 @@ body{
   height: 5%;
   width: 5%;
   margin-top: 7%;
+  cursor: pointer;
+  transition: transform 0.5s ease; /* Transición suave */
+}
+.star:hover {
+  animation: rotateStar 1s linear forwards; /* Inicia la animación al hacer hover */
 }
 
+@keyframes rotateStar {
+  from {
+    transform: rotate(0deg); /* Inicio de la rotación */
+  }
+  to {
+    transform: rotate(180deg); /* Final de la rotación */
+  }
+}
 .skills{
   color: #ad3e44;
   text-align: center; /* Center the text horizontally */
@@ -400,17 +413,17 @@ left: 0;
 width: 100%;
 height: 100%;
 border-radius: 5px;
-color: white;
+color: rgb(27, 27, 27);
 box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 backface-visibility: hidden;
 }
 .front {
   background:#f2e0c9;
-  font-size: 12px;
+  font-size: 15px;
   .card-img{
     background: black;
     width: 100%;
-    height: 350px;
+    height: 330px;
     overflow:hidden;
     & img{
       width: 100%;
@@ -419,17 +432,17 @@ backface-visibility: hidden;
   }
   .card-body{
     width: 100%;
-    height: 150px;    
+    height: 100px;    
     h3{
-     font-size: 15px; 
+     font-size: 20px; 
     }
   }
   .card-footer{
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 .back {  
-  background: tomato;
+  background:#f2e0c9;
   font-size: 14px;  
   p{
     padding: 1em;
