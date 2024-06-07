@@ -27,11 +27,12 @@ a {
   color: #f2e0c9;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.25em;
   
   display: inline-block;
   padding: 15px 20px;
   position: relative;
+  font-size: 20px;
 }
 a:after {    
   background: none repeat scroll 0 0 transparent;
@@ -66,7 +67,7 @@ body{
 .name {
   color: #ad3e44;
   text-align: center; /* Center the text horizontally */
-  font-size: 400%;
+  font-size: 350%;
 }
 
 :root {
@@ -156,7 +157,7 @@ body{
 }
 
 .imagen-sobre-mi {
-  max-width: 35%; /* Ajustar el tamaño de la imagen */
+  max-width: 30%; /* Ajustar el tamaño de la imagen */
   height: auto;
   margin-left: 15px;
   border-radius: 10px 10px 0 0; /* Opcional: Añadir borde redondeado a la imagen en la parte superior */
@@ -168,9 +169,8 @@ body{
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 1.5;
+  line-height: 2;
   color: #f2e0c9;
-  padding: 15px;
   max-width: 60%; /* Asegurarse de que el texto ocupe el resto del espacio */
 }
 
