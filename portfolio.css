@@ -2,8 +2,12 @@ navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ad3e44 ;/* Color de fondo del navbar */
+  background-color: #ad3e44; /* Color de fondo del navbar */
   z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+  transition: top 0.3s; /* Transición para el efecto de esconder/mostrar */
+}
+.hidden-navbar {
+  top: -90px; /* Ajusta esto si el navbar tiene una altura diferente */
 }
 
 ul { 
@@ -140,22 +144,36 @@ body{
 	}
 }
 
-.caja{
+.caja {
+  display: flex; /* Utilizar Flexbox para alinear elementos */
+  align-items: center; /* Centrar verticalmente los elementos */
   background-color: #ad3e44;
   border-radius: 15px;
-  margin-left: 15%;
+  margin-left: 17%;
   margin-top: -5%;
-  margin-right: 15%;
+  margin-right: 17%;
+
 }
 
-.sobre-mi{
+.imagen-sobre-mi {
+  max-width: 35%; /* Ajustar el tamaño de la imagen */
+  height: auto;
+  margin-left: 15px;
+  border-radius: 10px 10px 0 0; /* Opcional: Añadir borde redondeado a la imagen en la parte superior */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  display: block; /* Asegurarse de que no haya espacio debajo de la imagen */
+}
+
+.sobre-mi {
   font-family: 'Arial', sans-serif;
   font-weight: bold;
-  padding: 25px;
   letter-spacing: 2px;
   line-height: 1.5;
   color: #f2e0c9;
+  padding: 15px;
+  max-width: 60%; /* Asegurarse de que el texto ocupe el resto del espacio */
 }
+
 
 .star {
   display: block;
@@ -570,4 +588,144 @@ transform: rotateY(180deg);
     width: 0;
     text-indent: 0;
   }
+}
+
+.slider {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.slide_viewer {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+.slide:nth-of-type(1) {
+  background-image: url('fox.png'); /* Ruta de la imagen */
+  background-size: cover; /* Ajustar el tamaño de la imagen */
+  background-position: center; /* Posición de la imagen */
+}
+
+
+.slide:nth-of-type(2) {
+  background: #F4E4CD;
+}
+
+.slide:nth-of-type(3) {
+  background: #C75534;
+}
+
+.slide:nth-of-type(4) {
+  background: #D1D1D4;
+}
+
+.slide_buttons {
+display: none;
+}
+
+.directional_nav {
+  height: 500px;
+  margin: 0 auto;
+  max-width: 940px;
+  position: relative;
+  top: -500px;
+}
+
+.previous_btn {
+  bottom: 0;
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  color: #f2e0c9 ;
+  top: 0;
+}
+
+.next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 100px;
+  color: #f2e0c9 ;
+  top: 0;
+}
+
+.previous_btn, .next_btn {
+  font-size: 24px; /* Tamaño de fuente más grande */
+  width: 60px; /* Ancho del botón */
+  height: 60px; /* Altura del botón */
+  background-color: #ad3e44; /* Color de fondo inicial */
+  border-radius: 50%; /* Radio para hacer un círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: font-size 0.3s ease, background-color 0.3s ease; /* Agregar transición al tamaño de la fuente y al color de fondo */
+  cursor: pointer;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  background-color: transparent; /* Cambiar el color de fondo al pasar el ratón */
+  color: #ad3e44; /* Cambiar el color del texto al pasar el ratón */
+  font-size: 28px; /* Hacer la fuente un poco más grande al pasar el ratón */
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .previous_btn {
+    left: 50px;
+  }
+  .next_btn {
+    right: 50px;
+  }
+}
+
+.caja-2{
+  background-color:#f2e0c9 ;
+  border-radius: 15px;
+  margin-left: 25%;
+  margin-top: -25%;
+  margin-right: 25%;
+  
+}
+
+.proyectos-txt{
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  padding: 25px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  color: #ad3e44;
+}
+
+.espacio {
+  height: 100px; /* Ajusta la altura según sea necesario */
+}
+
+.apps{
+  background-color: #f2e0c9;
+}
+
+.apps-name{
+  color: #ad3e44;
+  text-align: center;
+  font-size: 400%;
+  margin-top: -5%;
 }
